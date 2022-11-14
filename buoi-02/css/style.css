@@ -1,0 +1,43 @@
+body{
+    font-size: 12px;
+}
+h1 {
+        font-size: 18px;
+        color: purple;
+      }
+      .chu-bu {
+        font-size: 24px;
+      }
+
+      #the-p {
+        background-color: aquamarine;
+        padding: 10px;
+        border-radius: 10px;
+      }
+
+      .do-vang {
+        font-style: italic;
+        text-decoration: underline;
+        text-align: center;
+        background-color: red;
+        color: yellow;
+        padding: 16px;
+        margin: 32px;
+        border: 10px solid rgb(154, 128, 24);
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+      }
+
+      #header img.logo {
+      }
+      p:nth-child(3) {
+        border-bottom: 1px solid red;
+      }
+      p:nth-child(3):hover {
+        color: red;
+      }
+
+      .do-vang:hover {
+        color: #fff;
+        font-size: 32px;
+      }
