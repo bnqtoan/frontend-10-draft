@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Animation</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/animate.min.css" />
+  </head>
+  <body>
+    <div class="box" id="box"></div>
+    <button id="btn">Play</button>
+    <h1
+      class="animate__animated animate__rotateIn"
+      style="margin-bottom: 800px"
+    >
+      An animated element
+    </h1>
+    <div class="wow animate__fadeInLeft">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae
+      excepturi odio quas eligendi at reprehenderit quidem nam quam fugit sequi
+      atque, alias sed, laudantium quis beatae molestias possimus autem
+      distinctio?
+    </div>
+    <div class="wow animate__fadeInLeft" style="margin-bottom: 80px">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae
+      excepturi odio quas eligendi at reprehenderit quidem nam quam fugit sequi
+      atque, alias sed, laudantium quis beatae molestias possimus autem
+      distinctio?
+    </div>
+    <div class="wow animate__fadeInLeft" style="margin-bottom: 80px">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae
+      excepturi odio quas eligendi at reprehenderit quidem nam quam fugit sequi
+      atque, alias sed, laudantium quis beatae molestias possimus autem
+      distinctio?
+    </div>
+    <script src="./js/wow.min.js"></script>
+    <script>
+      const btn = document.getElementById("btn");
+      const box = document.getElementById("box");
+      btn.addEventListener("click", () => {
+        //box.classList.add("animation");
+        box.remove();
+      });
+
+      wow = new WOW({
+        boxClass: "wow", // default
+        animateClass: "animate__animated", // default
+        offset: 0, // default
+        mobile: true, // default
+        live: true, // default
+      });
+      wow.init();
+    </script>
+  </body>
+</html>

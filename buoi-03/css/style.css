@@ -1,0 +1,39 @@
+html{
+    font-size: 40px;
+}
+body{
+    font-size: 25px;
+}
+
+div{
+    font-size: 8px;
+}
+
+p{
+    margin: 0;
+    color: red;
+    font-size: 80px;
+    margin-bottom: 1em;
+}
+
+/* @media screen and (min-width: 768px) {
+    p{
+        color: blue;
+        font-size: 36px;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    p{
+        color: purple;
+        font-size: 44px;
+    }
+}
+
+@media print {
+    p{
+        font-size: 16px;
+        text-decoration: underline;
+        color: black;
+    }
+} */

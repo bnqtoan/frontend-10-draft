@@ -1,0 +1,26 @@
+.box{
+    width: 150px;
+    height: 150px;
+    background-color: purple;
+}
+
+.animation{
+    animation: move 3s ease-in-out alternate;
+}
+
+@keyframes move {
+    0% {
+        transform: translate(0, 0);
+        border-radius: 0;
+    }
+
+    50%{
+        transform: translate(150px, 0);
+        border-radius: 99999px;
+        background-color: yellow;
+    }
+    100%{
+        transform: translate(150px, 150px);
+        background-color: blue;
+    }
+}
