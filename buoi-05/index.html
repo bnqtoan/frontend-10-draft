@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Popup</title>
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis optio
+    voluptas corporis ipsam eligendi aspernatur repudiandae pariatur,
+    dignissimos cum esse earum, inventore distinctio recusandae provident?
+    Accusamus non mollitia dolorum nostrum?
+    <button
+      class="px-4 py-2 text-white bg-blue-600 rounded shadow"
+      id="open"
+      type="button"
+    >
+      Open
+    </button>
+    <div
+      id="popup-container"
+      class="fixed inset-0 flex justify-center py-10 bg-black opacity-0 pointer-events-none bg-opacity-30"
+    >
+      <div class="w-[60%] relative bg-white rounded border shadow-sm p-4">
+        <h2>Tiêu đề</h2>
+        <p>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Inventore
+          fuga ab sunt officiis corporis harum excepturi dolores, dolorum est
+          nihil officia ut, saepe enim rem reiciendis explicabo magnam debitis
+          qui.
+        </p>
+        <button
+          id="close"
+          class="absolute w-6 h-6 text-white bg-red-500 rounded -top-2 -right-2"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="w-6 h-6"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M6 18L18 6M6 6l12 12"
+            />
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <script>
+      const btnOpen = document.getElementById("open");
+      const btnClose = document.getElementById("close");
+      const popupContainer = document.getElementById("popup-container");
+
+      function closePopup() {
+        popupContainer.classList.add("opacity-0");
+        popupContainer.classList.add("pointer-events-none");
+      }
+
+      function openPopup() {
+        popupContainer.classList.remove("opacity-0");
+        popupContainer.classList.remove("pointer-events-none");
+      }
+
+      btnOpen.addEventListener("click", () => {
+        openPopup();
+      });
+
+      btnClose.addEventListener("click", () => {
+        closePopup();
+      });
+
+      document.addEventListener("keydown", (e) => {
+        if (e.keyCode === 27) {
+          closePopup();
+        }
+      });
+
+      document.addEventListener("keydown", (e) => {
+        if (e.keyCode === 191) {
+          openPopup();
+        }
+      });
+    </script>
+  </body>
+</html>
